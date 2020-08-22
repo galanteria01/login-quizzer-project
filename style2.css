@@ -1,6 +1,9 @@
 body{
     background-color:#192B3F;
     font-family: Comfortaa;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
+    
 }
 
 #img1{
@@ -18,6 +21,8 @@ body{
     width: 400px;
     right: 50px;
     border-radius: 10px;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
 }
 input[type=text], input[type=password],input[type=date]{
     width: 80%;
@@ -79,3 +84,30 @@ a{
 #login{
     color: #192B3F;
 }
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(500px) scale(.2);
+    }
+    100% {
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
